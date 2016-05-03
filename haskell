@@ -63,5 +63,5 @@ import Graphics.Rendering.Cairo
 #endif
 
 #ifdef MIN_VERSION_gtk3
-import Graphics.UI.Gtk
+import Graphics.UI.Gtk hiding (rectangle)
 #endif
