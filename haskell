@@ -2,6 +2,7 @@ import Prelude hiding ((!!), head, tail, init, last, minimum)
 import Control.Exception
 import Control.Monad
 import Control.Monad.Fix
+import Data.Bits
 import Data.Char
 import Data.Either hiding (isLeft, isRight)
 import Data.Int
@@ -49,6 +50,14 @@ import Control.Monad.Trans.Except
 #ifdef MIN_VERSION_either
 import Control.Monad.Trans.Either hiding (hoistEither)
 import Data.Either.Combinators hiding (isLeft, isRight)
+#endif
+
+#ifdef MIN_VERSION_hashable
+import Data.Hashable
+#endif
+
+#ifdef MIN_VERSION_hashmap
+import qualified Data.HashMap as H
 #endif
 
 #ifdef MIN_VERSION_errors
