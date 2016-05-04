@@ -1,6 +1,7 @@
 import Prelude hiding ((!!), head, tail, init, last, minimum)
 import Control.Exception
 import Control.Monad
+import Control.Monad.Fix
 import Data.Char
 import Data.Either hiding (isLeft, isRight)
 import Data.Int
@@ -59,7 +60,7 @@ import System.Posix.IO
 #endif
 
 #ifdef MIN_VERSION_cairo
-import Graphics.Rendering.Cairo
+import Graphics.Rendering.Cairo hiding (x, y, width, height)
 #endif
 
 #ifdef MIN_VERSION_gtk3
