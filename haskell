@@ -8,6 +8,7 @@ import Data.Either hiding (isLeft, isRight)
 import Data.Int
 import Data.List
 import Data.Maybe hiding (fromJust)
+import Data.Version
 import Data.Word
 import Foreign.Marshal hiding (void)
 import System.Console.GetOpt
