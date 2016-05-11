@@ -79,3 +79,8 @@ import Graphics.Rendering.Cairo hiding (x, y, width, height)
 #ifdef MIN_VERSION_gtk3
 import Graphics.UI.Gtk hiding (rectangle)
 #endif
+
+#ifdef MIN_VERSION_HUnit
+import Test.HUnit.Base
+import Test.HUnit.Text
+#endif
