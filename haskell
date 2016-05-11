@@ -8,9 +8,12 @@ import Data.Either hiding (isLeft, isRight)
 import Data.Int
 import Data.List
 import Data.Maybe hiding (fromJust)
+import Data.Typeable
 import Data.Version
 import Data.Word
 import Foreign.Marshal hiding (void)
+import Foreign.Ptr
+import Foreign.Storable
 import System.Console.GetOpt
 import System.Environment
 import System.Exit
@@ -80,7 +83,7 @@ import Graphics.Rendering.Cairo hiding (x, y, width, height)
 import Graphics.UI.Gtk hiding (rectangle)
 #endif
 
-#ifdef MIN_VERSION_HUnit
+#ifdef TESTS
 import Test.HUnit.Base
 import Test.HUnit.Text
 #endif
