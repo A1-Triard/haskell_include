@@ -30,18 +30,30 @@ import Data.Vector (Vector, (!?))
 import qualified Data.Vector as V hiding ((!), head, last, init, tail, Vector, (!?))
 #endif
 
+#ifdef MIN_VERSION_containers
+import Data.Map (Map)
+import qualified Data.Map.Strict as S (Map)
+import qualified Data.Map as M hiding ((!), Map)
+import qualified Data.Map.Strict as SM hiding ((!), Map)
+#endif
+
 #ifdef MIN_VERSION_bytestring
 import Data.ByteString.Lazy (ByteString)
-import qualified Data.ByteString.Lazy as B hiding (ByteString)
+import qualified Data.ByteString as S (ByteString)
+import qualified Data.ByteString.Lazy as B hiding (ByteString, head, last, init, tail)
+import qualified Data.ByteString as SB hiding (ByteString, head, last, init, tail)
 import qualified Data.ByteString.Lazy.Char8 as C
+import qualified Data.ByteString.Char8 as SC
 #endif
 
 #ifdef MIN_VERSION_utf8_string
 import qualified Data.ByteString.Lazy.UTF8 as U
+import qualified Data.ByteString.UTF8 as SU
 #endif
 
 #ifdef MIN_VERSION_base64_bytestring
 import Data.ByteString.Base64.Lazy
+import qualified Data.ByteString.Base64 as S
 #endif
 
 #ifdef MIN_VERSION_monad_loops
