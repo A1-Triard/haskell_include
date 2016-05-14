@@ -79,6 +79,10 @@ import Data.Hashable
 import qualified Data.HashMap as H
 #endif
 
+#ifdef MIN_VERSION_binary
+import Data.Binary.Get
+#endif
+
 #ifdef MIN_VERSION_errors
 import Control.Error.Util
 #endif
