@@ -1,4 +1,5 @@
 import Prelude hiding ((!!), head, tail, init, last, minimum)
+import Control.Applicative
 import Control.Exception
 import Control.Monad
 import Control.Monad.Fix
@@ -21,7 +22,13 @@ import System.Exit
 import System.IO
 import System.IO.Error
 import System.Posix.Types
+import Text.ParserCombinators.ReadPrec hiding (lift)
+import Text.Read hiding (lift)
 import Text.Show
+
+#ifdef MIN_VERSION_semigroups
+import Data.Semigroup hiding (Option)
+#endif
 
 #ifdef MIN_VERSION_MissingH
 import Data.String.Utils
