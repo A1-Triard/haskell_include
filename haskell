@@ -96,8 +96,8 @@ import Data.Hashable
 import qualified Data.HashMap as H
 #endif
 
-#ifdef MIN_VERSION_binary
-import Data.Binary.Get
+#ifdef MIN_VERSION_binary_ext
+import Data.Binary.Get.Ext
 #endif
 
 #ifdef MIN_VERSION_errors
