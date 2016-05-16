@@ -65,6 +65,10 @@ import Data.ByteString.Base64.Lazy
 import qualified Data.ByteString.Base64 as S
 #endif
 
+#ifdef MIN_VERSION_iconv
+import qualified Codec.Text.IConv as IC
+#endif
+
 #ifdef MIN_VERSION_monad_loops
 import Control.Monad.Loops
 #endif
@@ -86,6 +90,10 @@ import Control.Monad.Trans.Except
 #ifdef MIN_VERSION_either
 import Control.Monad.Trans.Either hiding (hoistEither)
 import Data.Either.Combinators hiding (isLeft, isRight)
+#endif
+
+#ifdef MIN_VERSION_mtl
+import Control.Monad.State.Lazy
 #endif
 
 #ifdef MIN_VERSION_hashable
