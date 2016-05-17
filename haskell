@@ -39,6 +39,14 @@ import Data.Vector (Vector, (!?))
 import qualified Data.Vector as V hiding ((!), head, last, init, tail, Vector, (!?))
 #endif
 
+#ifdef MIN_VERSION_text
+import Data.Text.Lazy (Text)
+import qualified Data.Text as S (Text)
+import qualified Data.Text.Lazy as T hiding (Text, head, last, tail, init)
+import qualified Data.Text.Lazy.IO as T
+import qualified Data.Text as ST hiding (Text, head, last, tail, init)
+#endif
+
 #ifdef MIN_VERSION_containers
 import Data.Map (Map)
 import qualified Data.Map.Strict as S (Map)
@@ -70,10 +78,10 @@ import qualified Codec.Text.IConv as IC
 #endif
 
 #ifdef MIN_VERSION_attoparsec
-import qualified Data.Attoparsec.ByteString as SB
-import qualified Data.Attoparsec.ByteString.Lazy as B
-import qualified Data.Attoparsec.Text as ST
-import qualified Data.Attoparsec.Text.Lazy as T
+import qualified Data.Attoparsec.ByteString as SQ
+import qualified Data.Attoparsec.ByteString.Lazy as Q
+import qualified Data.Attoparsec.Text as SP
+import qualified Data.Attoparsec.Text.Lazy as P
 #endif
 
 #ifdef MIN_VERSION_monad_loops
