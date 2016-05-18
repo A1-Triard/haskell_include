@@ -6,6 +6,7 @@ import Control.Monad.Fix
 import Data.Bits
 import Data.Char
 import Data.Either hiding (isLeft, isRight)
+import Data.Functor.Identity
 import Data.Int
 import Data.List
 import Data.Maybe hiding (fromJust)
@@ -137,6 +138,16 @@ import Graphics.Rendering.Cairo hiding (x, y, width, height)
 
 #ifdef MIN_VERSION_gtk3
 import Graphics.UI.Gtk hiding (rectangle)
+#endif
+
+#ifdef MIN_VERSION_conduit
+import Data.Conduit
+import Data.Conduit.Lift
+import qualified Data.Conduit.List as N
+#endif
+
+#ifdef MIN_VERSION_conduit_combinators
+import qualified Data.Conduit.Combinators as N
 #endif
 
 #ifdef TESTS
