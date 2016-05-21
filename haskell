@@ -147,7 +147,7 @@ import qualified Data.Conduit.List as N
 #endif
 
 #ifdef MIN_VERSION_conduit_combinators
-import qualified Data.Conduit.Combinators as N
+import qualified Data.Conduit.Combinators as N hiding (map)
 #endif
 
 #ifdef TESTS
