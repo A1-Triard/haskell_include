@@ -77,6 +77,10 @@ import qualified Data.Map as M hiding ((!), Map)
 import qualified Data.Map.Strict as SM hiding ((!), Map)
 #endif
 
+#ifdef MIN_VERSION_directory
+import System.Directory
+#endif
+
 #ifdef MIN_VERSION_either
 import Control.Monad.Trans.Either hiding (hoistEither)
 import Data.Either.Combinators hiding (isLeft, isRight)
