@@ -27,32 +27,24 @@ import Text.ParserCombinators.ReadPrec hiding (lift)
 import Text.Read hiding (lift)
 import Text.Show
 
-#ifdef MIN_VERSION_semigroups
-import Data.Semigroup hiding (Option)
-#endif
-
 #ifdef MIN_VERSION_MissingH
 import Data.String.Utils
 #endif
 
-#ifdef MIN_VERSION_vector
-import Data.Vector (Vector, (!?))
-import qualified Data.Vector as V hiding ((!), head, last, init, tail, Vector, (!?))
+#ifdef MIN_VERSION_attoparsec
+import qualified Data.Attoparsec.ByteString as SQ
+import qualified Data.Attoparsec.ByteString.Lazy as Q
+import qualified Data.Attoparsec.Text as SP
+import qualified Data.Attoparsec.Text.Lazy as P
 #endif
 
-#ifdef MIN_VERSION_text
-import Data.Text.Lazy (Text)
-import qualified Data.Text as S (Text)
-import qualified Data.Text.Lazy as T hiding (Text, head, last, tail, init)
-import qualified Data.Text.Lazy.IO as T
-import qualified Data.Text as ST hiding (Text, head, last, tail, init)
+#ifdef MIN_VERSION_base64_bytestring
+import Data.ByteString.Base64.Lazy
+import qualified Data.ByteString.Base64 as S
 #endif
 
-#ifdef MIN_VERSION_containers
-import Data.Map (Map)
-import qualified Data.Map.Strict as S (Map)
-import qualified Data.Map as M hiding ((!), Map)
-import qualified Data.Map.Strict as SM hiding ((!), Map)
+#ifdef MIN_VERSION_binary_ext
+import Data.Binary.Get.Ext
 #endif
 
 #ifdef MIN_VERSION_bytestring
@@ -64,43 +56,25 @@ import qualified Data.ByteString.Lazy.Char8 as C
 import qualified Data.ByteString.Char8 as SC
 #endif
 
-#ifdef MIN_VERSION_utf8_string
-import qualified Data.ByteString.Lazy.UTF8 as U
-import qualified Data.ByteString.UTF8 as SU
+#ifdef MIN_VERSION_cairo
+import Graphics.Rendering.Cairo hiding (x, y, width, height)
 #endif
 
-#ifdef MIN_VERSION_base64_bytestring
-import Data.ByteString.Base64.Lazy
-import qualified Data.ByteString.Base64 as S
+#ifdef MIN_VERSION_conduit
+import Data.Conduit
+import Data.Conduit.Lift
+import qualified Data.Conduit.List as N
 #endif
 
-#ifdef MIN_VERSION_iconv
-import qualified Codec.Text.IConv as IC
+#ifdef MIN_VERSION_conduit_combinators
+import qualified Data.Conduit.Combinators as N hiding (map)
 #endif
 
-#ifdef MIN_VERSION_attoparsec
-import qualified Data.Attoparsec.ByteString as SQ
-import qualified Data.Attoparsec.ByteString.Lazy as Q
-import qualified Data.Attoparsec.Text as SP
-import qualified Data.Attoparsec.Text.Lazy as P
-#endif
-
-#ifdef MIN_VERSION_monad_loops
-import Control.Monad.Loops
-#endif
-
-#ifdef MIN_VERSION_split
-import Data.List.Split
-#endif
-
-#ifdef MIN_VERSION_utility_ht
-import Data.List.HT hiding (replace)
-#endif
-
-#ifdef MIN_VERSION_transformers
-import Control.Monad.IO.Class
-import Control.Monad.Trans.Class
-import Control.Monad.Trans.Except
+#ifdef MIN_VERSION_containers
+import Data.Map (Map)
+import qualified Data.Map.Strict as S (Map)
+import qualified Data.Map as M hiding ((!), Map)
+import qualified Data.Map.Strict as SM hiding ((!), Map)
 #endif
 
 #ifdef MIN_VERSION_either
@@ -108,8 +82,12 @@ import Control.Monad.Trans.Either hiding (hoistEither)
 import Data.Either.Combinators hiding (isLeft, isRight)
 #endif
 
-#ifdef MIN_VERSION_mtl
-import Control.Monad.State.Lazy
+#ifdef MIN_VERSION_errors
+import Control.Error.Util hiding (err, errLn)
+#endif
+
+#ifdef MIN_VERSION_gtk3
+import Graphics.UI.Gtk hiding (rectangle)
 #endif
 
 #ifdef MIN_VERSION_hashable
@@ -120,38 +98,60 @@ import Data.Hashable
 import qualified Data.HashMap as H
 #endif
 
-#ifdef MIN_VERSION_binary_ext
-import Data.Binary.Get.Ext
+#ifdef MIN_VERSION_iconv
+import qualified Codec.Text.IConv as IC
 #endif
 
-#ifdef MIN_VERSION_errors
-import Control.Error.Util
-#endif
-
-#ifdef MIN_VERSION_unix
-import System.Posix.IO
-#endif
-
-#ifdef MIN_VERSION_cairo
-import Graphics.Rendering.Cairo hiding (x, y, width, height)
-#endif
-
-#ifdef MIN_VERSION_gtk3
-import Graphics.UI.Gtk hiding (rectangle)
-#endif
-
-#ifdef MIN_VERSION_conduit
-import Data.Conduit
-import Data.Conduit.Lift
-import qualified Data.Conduit.List as N
+#ifdef MIN_VERSION_monad_loops
+import Control.Monad.Loops
 #endif
 
 #ifdef MIN_VERSION_mono_traversable
 import Data.MonoTraversable
 #endif
 
-#ifdef MIN_VERSION_conduit_combinators
-import qualified Data.Conduit.Combinators as N hiding (map)
+#ifdef MIN_VERSION_mtl
+import Control.Monad.State.Lazy
+#endif
+
+#ifdef MIN_VERSION_semigroups
+import Data.Semigroup hiding (Option)
+#endif
+
+#ifdef MIN_VERSION_split
+import Data.List.Split
+#endif
+
+#ifdef MIN_VERSION_text
+import Data.Text.Lazy (Text)
+import qualified Data.Text as S (Text)
+import qualified Data.Text.Lazy as T hiding (Text, head, last, tail, init)
+import qualified Data.Text.Lazy.IO as T
+import qualified Data.Text as ST hiding (Text, head, last, tail, init)
+#endif
+
+#ifdef MIN_VERSION_transformers
+import Control.Monad.IO.Class
+import Control.Monad.Trans.Class
+import Control.Monad.Trans.Except
+#endif
+
+#ifdef MIN_VERSION_unix
+import System.Posix.IO
+#endif
+
+#ifdef MIN_VERSION_utf8_string
+import qualified Data.ByteString.Lazy.UTF8 as U
+import qualified Data.ByteString.UTF8 as SU
+#endif
+
+#ifdef MIN_VERSION_utility_ht
+import Data.List.HT hiding (replace)
+#endif
+
+#ifdef MIN_VERSION_vector
+import Data.Vector (Vector, (!?))
+import qualified Data.Vector as V hiding ((!), head, last, init, tail, Vector, (!?))
 #endif
 
 #ifdef TESTS
