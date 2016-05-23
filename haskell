@@ -32,8 +32,8 @@ import Data.String.Utils
 #endif
 
 #ifdef MIN_VERSION_attoparsec
-import Data.Attoparsec.Text.Lazy (Parser)
-import qualified Data.Attoparsec.Text.Lazy as Tp
+import Data.Attoparsec.Text (Parser)
+import qualified Data.Attoparsec.Text as Tp
 #endif
 
 #ifdef MIN_VERSION_base64_bytestring
