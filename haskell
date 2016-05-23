@@ -8,7 +8,7 @@ import Data.Char
 import Data.Either hiding (isLeft, isRight)
 import Data.Functor.Identity
 import Data.Int
-import Data.List
+import Data.List hiding ((!!), head, tail, init, last, minimum)
 import Data.Maybe hiding (fromJust)
 import Data.Typeable
 import Data.Version
@@ -32,10 +32,8 @@ import Data.String.Utils
 #endif
 
 #ifdef MIN_VERSION_attoparsec
-import qualified Data.Attoparsec.ByteString as SQ
-import qualified Data.Attoparsec.ByteString.Lazy as Q
-import qualified Data.Attoparsec.Text as SP
-import qualified Data.Attoparsec.Text.Lazy as P
+import Data.Attoparsec.Text.Lazy (Parser)
+import qualified Data.Attoparsec.Text.Lazy as Tp
 #endif
 
 #ifdef MIN_VERSION_base64_bytestring
