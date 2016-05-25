@@ -32,6 +32,7 @@ import Data.String.Utils
 #endif
 
 #ifdef MIN_VERSION_attoparsec
+import Data.Attoparsec.Text ((<?>))
 import qualified Data.Attoparsec.Text as T (Parser)
 import qualified Data.Attoparsec.Text as TP (parse, parseOnly, Result, IResult (..))
 import qualified Data.Attoparsec.Text as Tp hiding (parse, parseOnly, Parser, Result, IResult, Done, Partial, Fail)
