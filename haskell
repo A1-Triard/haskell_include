@@ -16,6 +16,7 @@ import Data.Word
 import Foreign.Marshal hiding (void)
 import Foreign.Ptr
 import Foreign.Storable
+import GHC.Float
 import Numeric
 import System.Console.GetOpt
 import System.Environment
@@ -80,6 +81,10 @@ import Data.Map (Map)
 import qualified Data.Map.Strict as S (Map)
 import qualified Data.Map as M hiding ((!), Map)
 import qualified Data.Map.Strict as SM hiding ((!), Map)
+#endif
+
+#ifdef MIN_VERSION_data_binary_ieee754
+import Data.Binary.IEEE754
 #endif
 
 #ifdef MIN_VERSION_directory
