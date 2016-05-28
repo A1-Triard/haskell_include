@@ -171,6 +171,10 @@ import Data.Vector (Vector, (!?))
 import qualified Data.Vector as V hiding ((!), head, last, init, tail, Vector, (!?))
 #endif
 
+#ifdef MIN_VERSION_zlib
+import qualified Codec.Compression.GZip as GZip
+#endif
+
 #ifdef TESTS
 import Test.HUnit.Base
 import Test.HUnit.Text
