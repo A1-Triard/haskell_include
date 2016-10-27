@@ -129,6 +129,10 @@ import Data.MonoTraversable
 import Control.Monad.State.Lazy
 #endif
 
+#ifdef MIN_VERSION_ncurses
+import UI.NCurses
+#endif
+
 #ifdef MIN_VERSION_semigroups
 import Data.Semigroup hiding (Option)
 #endif
