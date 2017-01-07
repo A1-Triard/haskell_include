@@ -155,6 +155,10 @@ import qualified Data.Text.Encoding as ST
 import qualified Data.Text.Lazy.Encoding as T
 #endif
 
+#ifdef MIN_VERSION_time
+import Data.Time.Clock
+#endif
+
 #ifdef MIN_VERSION_transformers
 import Control.Monad.IO.Class
 import Control.Monad.Trans.Class
