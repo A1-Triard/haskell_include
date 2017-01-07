@@ -28,6 +28,10 @@ import Text.ParserCombinators.ReadPrec hiding (lift)
 import Text.Read hiding (lift)
 import Text.Show
 
+#ifdef MIN_VERSION_ConfigFile
+import qualified Data.ConfigFile as CF
+#endif
+
 #ifdef MIN_VERSION_MissingH
 import Data.String.Utils
 #endif
