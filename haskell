@@ -12,6 +12,7 @@ import Data.List hiding ((!!), head, tail, init, last, minimum)
 import Data.Maybe hiding (fromJust)
 import Data.Typeable
 import Data.Version
+import Data.Void
 import Data.Word
 import Foreign.Marshal hiding (void)
 import Foreign.Ptr
