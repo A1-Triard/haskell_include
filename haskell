@@ -157,6 +157,7 @@ import qualified Data.Text.Lazy.Encoding as T
 #endif
 
 #ifdef MIN_VERSION_time
+import Data.Time.Calendar
 import Data.Time.Clock
 #endif
 
