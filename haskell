@@ -72,6 +72,10 @@ import qualified Data.ByteString.Builder as BB
 import Graphics.Rendering.Cairo hiding (x, y, width, height)
 #endif
 
+#ifdef MIN_VERSION_clock
+import System.Clock
+#endif
+
 #ifdef MIN_VERSION_conduit
 import Data.Conduit
 import Data.Conduit.Lift
