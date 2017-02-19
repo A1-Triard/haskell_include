@@ -8,8 +8,9 @@ import Data.Char
 import Data.Either hiding (isLeft, isRight)
 import Data.Functor.Identity
 import Data.Int
-import Data.List hiding ((!!), head, tail, init, last, minimum)
+import Data.List hiding ((!!), head, tail, init, last, minimum, transpose)
 import Data.Maybe hiding (fromJust)
+import Data.Proxy
 import Data.Typeable
 import Data.Version
 import Data.Void
@@ -18,6 +19,7 @@ import Foreign.Marshal hiding (void)
 import Foreign.Ptr
 import Foreign.Storable
 import GHC.Float
+import GHC.TypeLits
 import Numeric
 import System.Console.GetOpt
 import System.Environment
@@ -69,7 +71,8 @@ import qualified Data.ByteString.Builder as BB
 #endif
 
 #ifdef MIN_VERSION_cairo
-import Graphics.Rendering.Cairo hiding (x, y, width, height)
+import Graphics.Rendering.Cairo hiding (x, y, width, height, Matrix)
+import qualified Graphics.Rendering.Cairo as R (x, y, width, height, Matrix)
 #endif
 
 #ifdef MIN_VERSION_clock
@@ -124,6 +127,10 @@ import qualified Data.HashMap as H
 
 #ifdef MIN_VERSION_iconv
 import qualified Codec.Text.IConv as IC
+#endif
+
+#ifdef MIN_VERSION_matrix
+import Data.Matrix
 #endif
 
 #ifdef MIN_VERSION_monad_loops
@@ -187,6 +194,13 @@ import Data.List.HT hiding (replace)
 #ifdef MIN_VERSION_vector
 import Data.Vector (Vector, (!?))
 import qualified Data.Vector as V hiding ((!), head, last, init, tail, Vector, (!?))
+#endif
+
+#ifdef MIN_VERSION_vector_space
+import Data.AffineSpace
+import Data.Basis
+import Data.Cross
+import Data.VectorSpace
 #endif
 
 #ifdef MIN_VERSION_zlib
