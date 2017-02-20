@@ -71,8 +71,8 @@ import qualified Data.ByteString.Builder as BB
 #endif
 
 #ifdef MIN_VERSION_cairo
-import Graphics.Rendering.Cairo hiding (x, y, width, height, Matrix)
-import qualified Graphics.Rendering.Cairo as R (x, y, width, height, Matrix)
+import Graphics.Rendering.Cairo hiding (x, y, width, height, Matrix, rotate)
+import qualified Graphics.Rendering.Cairo as R (x, y, width, height, Matrix, rotate)
 #endif
 
 #ifdef MIN_VERSION_clock
@@ -129,8 +129,28 @@ import qualified Data.HashMap as H
 import qualified Codec.Text.IConv as IC
 #endif
 
-#ifdef MIN_VERSION_matrix
-import Data.Matrix
+#ifdef MIN_VERSION_linear
+import Linear.Matrix ((!*!), (!+!), (!-!), (!*), (*!), (!!*), (*!!), (!!/))
+import qualified Linear.Matrix as L hiding ((!*!), (!+!), (!-!), (!*), (*!), (!!*), (*!!), (!!/))
+import qualified Linear.Metric as L
+import Linear.Quaternion (Quaternion (..))
+import qualified Linear.Quaternion as L hiding (Quaternion)
+import Linear.V0 as L (V0 (..))
+import qualified Linear.V0 as L hiding (V0)
+import Linear.V1 as L (V1 (..), _x)
+import qualified Linear.V1 as L hiding (V1, _x)
+import Linear.V2 as L (V2 (..), _x, _y)
+import qualified Linear.V2 as L hiding (V2, _x, _y)
+import Linear.V3 as L (V3 (..), _x, _y, _z)
+import qualified Linear.V3 as L hiding (V3, _x, _y, _z)
+import Linear.V4 as L (V4 (..), _x, _y, _z, _w)
+import qualified Linear.V4 as L hiding (V4, _x, _y, _z, _w)
+import Linear.Vector ((*^), (^*), (^/), (^+^), (^-^))
+import qualified Linear.Vector as L hiding ((*^), (^*), (^/), (^+^), (^-^))
+#endif
+
+#ifdef MIN_VERSION_lens
+import Control.Lens hiding (set)
 #endif
 
 #ifdef MIN_VERSION_monad_loops
@@ -194,13 +214,6 @@ import Data.List.HT hiding (replace)
 #ifdef MIN_VERSION_vector
 import Data.Vector (Vector, (!?))
 import qualified Data.Vector as V hiding ((!), head, last, init, tail, Vector, (!?))
-#endif
-
-#ifdef MIN_VERSION_vector_space
-import Data.AffineSpace
-import Data.Basis
-import Data.Cross
-import Data.VectorSpace
 #endif
 
 #ifdef MIN_VERSION_zlib
