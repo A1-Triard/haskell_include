@@ -130,8 +130,8 @@ import qualified Codec.Text.IConv as IC
 #endif
 
 #ifdef MIN_VERSION_linear
-import Linear.Matrix ((!*!), (!+!), (!-!), (!*), (*!), (!!*), (*!!), (!!/))
-import qualified Linear.Matrix as L hiding ((!*!), (!+!), (!-!), (!*), (*!), (!!*), (*!!), (!!/))
+import Linear.Matrix ((!*!), (!+!), (!-!), (!*), (*!), (!!*), (*!!), (!!/), M22, M23, M24, M32, M33, M34, M42, M43, M44)
+import qualified Linear.Matrix as L hiding ((!*!), (!+!), (!-!), (!*), (*!), (!!*), (*!!), (!!/), M22, M23, M24, M32, M33, M34, M42, M43, M44)
 import qualified Linear.Metric as L
 import Linear.Quaternion (Quaternion (..))
 import qualified Linear.Quaternion as L hiding (Quaternion)
