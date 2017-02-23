@@ -1,11 +1,16 @@
 import Prelude hiding ((!!), head, tail, init, last, minimum)
 import Control.Applicative
+#ifdef TESTS
+import Control.Exception hiding (assert)
+#else
 import Control.Exception
+#endif
 import Control.Monad
 import Control.Monad.Fix
 import Data.Bits
 import Data.Char
 import Data.Either hiding (isLeft, isRight)
+import Data.Foldable
 import Data.Functor.Identity
 import Data.Int
 import Data.List hiding ((!!), head, tail, init, last, minimum, transpose)
