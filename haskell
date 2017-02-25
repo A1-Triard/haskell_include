@@ -13,7 +13,7 @@ import Data.Either hiding (isLeft, isRight)
 import Data.Foldable
 import Data.Functor.Identity
 import Data.Int
-import Data.List hiding ((!!), head, tail, init, last, minimum, transpose)
+import Data.List hiding ((!!), head, tail, init, last, minimum, transpose, uncons)
 import Data.Maybe hiding (fromJust)
 import Data.Proxy
 import Data.Typeable
@@ -32,8 +32,8 @@ import System.Exit
 import System.IO
 import System.IO.Error
 import System.Posix.Types
-import Text.ParserCombinators.ReadPrec hiding (lift)
-import Text.Read hiding (lift)
+import Text.ParserCombinators.ReadPrec hiding (lift, get)
+import Text.Read hiding (lift, get)
 import Text.Show
 
 #ifdef MIN_VERSION_ConfigFile
@@ -99,6 +99,8 @@ import Data.Map (Map)
 import qualified Data.Map.Strict as S (Map)
 import qualified Data.Map as M hiding ((!), Map)
 import qualified Data.Map.Strict as SM hiding ((!), Map)
+import Data.Sequence (Seq, (><))
+import qualified Data.Sequence as S hiding (Seq, (<|), (|>), (><), viewl, viewr, ViewL, ViewR, (:>), (:<))
 #endif
 
 #ifdef MIN_VERSION_data_binary_ieee754
@@ -119,7 +121,8 @@ import Control.Error.Util hiding (err, errLn)
 #endif
 
 #ifdef MIN_VERSION_gtk3
-import Graphics.UI.Gtk hiding (rectangle)
+import Graphics.UI.Gtk hiding (rectangle, get, set)
+import qualified Graphics.UI.Gtk as K (rectangle, get, set)
 #endif
 
 #ifdef MIN_VERSION_hashable
@@ -155,7 +158,7 @@ import qualified Linear.Vector as L hiding ((*^), (^*), (^/), (^+^), (^-^))
 #endif
 
 #ifdef MIN_VERSION_lens
-import Control.Lens hiding (set)
+import Control.Lens
 #endif
 
 #ifdef MIN_VERSION_monad_loops
@@ -217,8 +220,8 @@ import Data.List.HT hiding (replace)
 #endif
 
 #ifdef MIN_VERSION_vector
-import Data.Vector (Vector, (!?))
-import qualified Data.Vector as V hiding ((!), head, last, init, tail, Vector, (!?))
+import Data.Vector (Vector, (!?), (//))
+import qualified Data.Vector as V hiding ((!), head, last, init, tail, Vector, (!?), (//))
 #endif
 
 #ifdef MIN_VERSION_zlib
