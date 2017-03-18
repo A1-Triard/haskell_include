@@ -174,7 +174,8 @@ import Control.Monad.State.Lazy
 #endif
 
 #ifdef MIN_VERSION_ncurses
-import UI.NCurses
+import UI.NCurses (Color (..), ColorID, Curses, Glyph (..), Attribute (..), glyphCornerUL, glyphCornerLL, glyphCornerUR, glyphCornerLR, glyphTeeL, glyphTeeR, glyphTeeB, glyphTeeT, glyphLineH, glyphLineV, glyphPlus, glyphScan1, glyphScan9, glyphDiamond, glyphStipple, glyphDegree, glyphPlusMinus, glyphBullet, glyphArrowL, glyphArrowR, glyphArrowD, glyphArrowU, glyphBoard, glyphLantern, glyphBlock, glyphS3, glyphS7, glyphNE, glyphLTE, glyphGTE, glyphPi, glyphSterling)
+import qualified UI.NCurses as K hiding (Color (..), ColorID, Curses, Glyph (..), Attribute (..), glyphCornerUL, glyphCornerLL, glyphCornerUR, glyphCornerLR, glyphTeeL, glyphTeeR, glyphTeeB, glyphTeeT, glyphLineH, glyphLineV, glyphPlus, glyphScan1, glyphScan9, glyphDiamond, glyphStipple, glyphDegree, glyphPlusMinus, glyphBullet, glyphArrowL, glyphArrowR, glyphArrowD, glyphArrowU, glyphBoard, glyphLantern, glyphBlock, glyphS3, glyphS7, glyphNE, glyphLTE, glyphGTE, glyphPi, glyphSterling)
 #endif
 
 #ifdef MIN_VERSION_semigroups
