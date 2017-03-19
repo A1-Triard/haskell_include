@@ -230,6 +230,6 @@ import qualified Codec.Compression.GZip as GZip
 #endif
 
 #ifdef TESTS
-import Test.HUnit.Base
+import Test.HUnit.Base hiding (Label)
 import Test.HUnit.Text
 #endif
