@@ -91,7 +91,7 @@ import qualified Data.Conduit.List as N
 #endif
 
 #ifdef MIN_VERSION_conduit_combinators
-import qualified Data.Conduit.Combinators as N hiding (map)
+import qualified Data.Conduit.Combinators as N hiding (map, concatMap)
 #endif
 
 #ifdef MIN_VERSION_containers
