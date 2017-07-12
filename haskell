@@ -20,6 +20,7 @@ import Data.Typeable
 import Data.Version
 import Data.Void
 import Data.Word
+import Foreign.C.String
 import Foreign.C.Types
 import Foreign.Marshal hiding (void)
 import Foreign.Ptr
@@ -193,6 +194,7 @@ import qualified Data.Text as S (Text)
 import qualified Data.Text.Lazy as T hiding (Text, head, last, tail, init)
 import qualified Data.Text.Lazy.IO as T
 import qualified Data.Text as ST hiding (Text, head, last, tail, init)
+import qualified Data.Text.Foreign as ST
 import qualified Data.Text.Encoding as ST
 import qualified Data.Text.Lazy.Encoding as T
 #endif
