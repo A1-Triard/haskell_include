@@ -172,6 +172,7 @@ import Data.MonoTraversable
 #endif
 
 #ifdef MIN_VERSION_mtl
+import Control.Monad.Reader
 import Control.Monad.State.Lazy
 #endif
 
@@ -196,6 +197,7 @@ import qualified Data.Text.Lazy.IO as T
 import qualified Data.Text as ST hiding (Text, head, last, tail, init)
 import qualified Data.Text.Foreign as ST
 import qualified Data.Text.Encoding as ST
+import qualified Data.Text.IO as ST
 import qualified Data.Text.Lazy.Encoding as T
 #endif
 
