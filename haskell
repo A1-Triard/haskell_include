@@ -23,6 +23,7 @@ import Data.Word
 import Foreign.C.String
 import Foreign.C.Types
 import Foreign.Marshal hiding (void)
+import Foreign.Marshal.Utils
 import Foreign.Ptr
 import Foreign.Storable
 import GHC.Float
