@@ -23,6 +23,7 @@ import Data.Word
 import Foreign.C.String
 import Foreign.C.Types
 import Foreign.Marshal hiding (void)
+import Foreign.Marshal.Array
 import Foreign.Marshal.Utils
 import Foreign.Ptr
 import Foreign.Storable
@@ -184,6 +185,10 @@ import qualified UI.NCurses as K hiding (Color (..), ColorID, Curses, Glyph (..)
 
 #ifdef MIN_VERSION_semigroups
 import Data.Semigroup hiding (Option)
+#endif
+
+#ifdef MIN_VERSION_setlocale
+import System.Locale.SetLocale
 #endif
 
 #ifdef MIN_VERSION_split
