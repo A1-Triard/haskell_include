@@ -111,6 +111,10 @@ import qualified Data.Sequence as S hiding (Seq, (<|), (|>), (><), viewl, viewr,
 import Data.Binary.IEEE754
 #endif
 
+#ifdef MIN_VERSION_deepseq
+import Control.DeepSeq
+#endif
+
 #ifdef MIN_VERSION_directory
 import System.Directory
 #endif
