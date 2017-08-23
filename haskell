@@ -91,12 +91,11 @@ import System.Clock
 #ifdef MIN_VERSION_conduit
 import Data.Conduit
 import Data.Conduit.Lift
-import qualified Data.Conduit.List as N
 import qualified Data.Conduit.Text as N
 #endif
 
 #ifdef MIN_VERSION_conduit_combinators
-import qualified Data.Conduit.Combinators as N hiding (map, concatMap)
+import qualified Data.Conduit.Combinators as N
 #endif
 
 #ifdef MIN_VERSION_conduit_extra
