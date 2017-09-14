@@ -61,6 +61,7 @@ import qualified Data.ByteString.Base64 as S
 #endif
 
 #ifdef MIN_VERSION_binary
+import qualified Data.Binary.Get as SG
 import Data.Binary.Put
 #endif
 
