@@ -28,6 +28,7 @@ import Data.Char
 import Data.Either hiding (isLeft, isRight)
 import Data.Foldable
 import Data.Functor.Identity
+import Data.IORef
 import Data.Int
 import Data.List hiding ((!!), head, tail, init, last, minimum, transpose, uncons)
 import Data.Maybe hiding (fromJust)
