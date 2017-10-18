@@ -65,6 +65,10 @@ import qualified Data.ConfigFile as CF
 import Data.String.Utils
 #endif
 
+#ifdef MIN_VERSION_app_settings
+import qualified Data.AppSettings as A
+#endif
+
 #ifdef MIN_VERSION_attoparsec
 import Data.Attoparsec.Text ((<?>))
 import qualified Data.Attoparsec.Text as T (Parser)
