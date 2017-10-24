@@ -33,6 +33,7 @@ import Data.Int
 import Data.List hiding ((!!), head, tail, init, last, minimum, transpose, uncons)
 import Data.Maybe hiding (fromJust)
 import Data.Proxy
+import Data.Semigroup
 import Data.Typeable
 import Data.Version
 import Data.Void
