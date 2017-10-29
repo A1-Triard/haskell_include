@@ -38,6 +38,7 @@ import Data.Typeable
 import Data.Version
 import Data.Void
 import Data.Word
+import Debug.Trace
 import Foreign.C.String
 import Foreign.C.Types
 import Foreign.Marshal hiding (void)
