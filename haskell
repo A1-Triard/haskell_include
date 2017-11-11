@@ -156,6 +156,28 @@ import Data.Either.Combinators hiding (isLeft, isRight)
 import Control.Error.Util hiding (err, errLn)
 #endif
 
+#ifdef MIN_VERSION_gi_gdk
+import GI.Gdk.Callbacks
+import GI.Gdk.Constants
+import GI.Gdk.Enums
+import GI.Gdk.Flags
+import GI.Gdk.Functions
+import GI.Gdk.Interfaces
+import qualified GI.Gdk.Objects as K
+import GI.Gdk.Structs
+import GI.Gdk.Unions
+#endif
+
+#ifdef MIN_VERSION_gi_glib
+import GI.GLib hiding (get, set)
+import qualified GI.Gtk as K (get, set)
+#endif
+
+#ifdef MIN_VERSION_gi_gtk
+import GI.Gtk hiding (get, set, init, main)
+import qualified GI.Gtk as K (init, main)
+#endif
+
 #ifdef MIN_VERSION_gtk3
 import Graphics.UI.Gtk hiding (rectangle, get, set)
 import qualified Graphics.UI.Gtk as K (rectangle, get, set)
