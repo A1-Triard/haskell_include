@@ -63,8 +63,17 @@ import Text.Show
 import qualified Data.ConfigFile as CF
 #endif
 
+#ifdef MIN_VERSION_Euterpea
+import qualified Euterpea as E
+import qualified Euterpea.IO.MIDI.MidiIO as E
+#endif
+
 #ifdef MIN_VERSION_MissingH
 import Data.String.Utils
+#endif
+
+#ifdef MIN_VERSION_PortMidi
+import qualified Sound.PortMidi as E
 #endif
 
 #ifdef MIN_VERSION_app_settings
