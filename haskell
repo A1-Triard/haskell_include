@@ -33,7 +33,7 @@ import Data.Int
 import Data.List hiding ((!!), head, tail, init, last, minimum, transpose, uncons)
 import Data.Maybe hiding (fromJust)
 import Data.Proxy
-import Data.Semigroup
+import Data.Semigroup hiding (Option)
 import Data.Typeable
 import Data.Version
 import Data.Void
@@ -163,6 +163,10 @@ import Data.Either.Combinators hiding (isLeft, isRight)
 
 #ifdef MIN_VERSION_errors
 import Control.Error.Util hiding (err, errLn)
+#endif
+
+#ifdef MIN_VERSION_exceptions
+import qualified Control.Monad.Catch as E
 #endif
 
 #ifdef MIN_VERSION_gi_gdk
