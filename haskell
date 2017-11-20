@@ -124,7 +124,6 @@ import System.Clock
 #ifdef MIN_VERSION_conduit
 import Data.Conduit
 import Data.Conduit.Lift
-import qualified Data.Conduit.List as N
 #endif
 
 #ifdef MIN_VERSION_conduit_combinators
