@@ -124,7 +124,7 @@ import System.Clock
 #ifdef MIN_VERSION_conduit
 import Data.Conduit
 import Data.Conduit.Lift
-import qualified Data.Conduit.Text as N
+import qualified Data.Conduit.List as N
 #endif
 
 #ifdef MIN_VERSION_conduit_combinators
@@ -240,11 +240,6 @@ import Control.Monad.Loops
 import Data.MonoTraversable
 #endif
 
-#ifdef MIN_VERSION_mtl
-import Control.Monad.Reader
-import Control.Monad.State.Lazy
-#endif
-
 #ifdef MIN_VERSION_ncurses
 import UI.NCurses (Color (..), ColorID, Curses, Glyph (..), Attribute (..), glyphCornerUL, glyphCornerLL, glyphCornerUR, glyphCornerLR, glyphTeeL, glyphTeeR, glyphTeeB, glyphTeeT, glyphLineH, glyphLineV, glyphPlus, glyphScan1, glyphScan9, glyphDiamond, glyphStipple, glyphDegree, glyphPlusMinus, glyphBullet, glyphArrowL, glyphArrowR, glyphArrowD, glyphArrowU, glyphBoard, glyphLantern, glyphBlock, glyphS3, glyphS7, glyphNE, glyphLTE, glyphGTE, glyphPi, glyphSterling)
 import qualified UI.NCurses as K hiding (Color (..), ColorID, Curses, Glyph (..), Attribute (..), glyphCornerUL, glyphCornerLL, glyphCornerUR, glyphCornerLR, glyphTeeL, glyphTeeR, glyphTeeB, glyphTeeT, glyphLineH, glyphLineV, glyphPlus, glyphScan1, glyphScan9, glyphDiamond, glyphStipple, glyphDegree, glyphPlusMinus, glyphBullet, glyphArrowL, glyphArrowR, glyphArrowD, glyphArrowU, glyphBoard, glyphLantern, glyphBlock, glyphS3, glyphS7, glyphNE, glyphLTE, glyphGTE, glyphPi, glyphSterling)
@@ -283,6 +278,10 @@ import Data.Time.Clock
 import Control.Monad.IO.Class
 import Control.Monad.Trans.Class
 import Control.Monad.Trans.Except
+import Control.Monad.Trans.Maybe
+import Control.Monad.Trans.Reader
+import Control.Monad.Trans.State.Strict
+import Control.Monad.Trans.Writer
 #endif
 
 #ifdef MIN_VERSION_unix
