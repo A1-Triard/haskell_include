@@ -132,6 +132,7 @@ import qualified Data.Conduit.Combinators as N
 #endif
 
 #ifdef MIN_VERSION_conduit_extra
+import qualified Data.Conduit.Binary as N
 import qualified Data.Conduit.Text as N
 #endif
 
