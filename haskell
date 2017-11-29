@@ -93,8 +93,8 @@ import qualified Data.ByteString.Base64 as S
 #endif
 
 #ifdef MIN_VERSION_binary
-import Data.Binary.Get
-import Data.Binary.Put
+import qualified Data.Binary.Get as S
+import qualified Data.Binary.Put as S
 #endif
 
 #ifdef MIN_VERSION_bytestring
@@ -140,7 +140,8 @@ import qualified Data.Sequence as S hiding (Seq, (<|), (|>), (><), viewl, viewr,
 #endif
 
 #ifdef MIN_VERSION_data_binary_ieee754
-import Data.Binary.IEEE754
+import Data.Binary.IEEE754 (floatToWord, wordToFloat, doubleToWord, wordToDouble)
+import qualified Data.Binary.IEEE754 as S hiding (floatToWord, wordToFloat, doubleToWord, wordToDouble)
 #endif
 
 #ifdef MIN_VERSION_deepseq
