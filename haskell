@@ -47,6 +47,7 @@ import Foreign.Marshal.Utils
 import Foreign.Ptr
 import Foreign.Storable
 import GHC.Float
+import GHC.Generics
 import GHC.TypeLits
 import Numeric
 import System.Console.GetOpt
