@@ -22,11 +22,14 @@ import Control.Exception hiding (assert) -- assert - conflict with HUnit:Test.HU
 import Control.Exception
 #endif
 import Control.Monad
+import Control.Monad.Fail
 import Control.Monad.Fix
+import Control.Monad.Zip
 import Data.Bits
 import Data.Char
 import Data.Either hiding (isLeft, isRight) -- isLeft, isRight - use from errors:Control.Error.Util
 import Data.Foldable
+import Data.Functor.Classes
 import Data.Functor.Identity
 import Data.IORef
 import Data.Int
