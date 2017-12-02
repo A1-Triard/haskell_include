@@ -27,6 +27,7 @@ import Control.Monad.Fix
 import Control.Monad.Zip
 import Data.Bits
 import Data.Char
+import Data.Data
 import Data.Either hiding (isLeft, isRight) -- isLeft, isRight - use from errors:Control.Error.Util
 import Data.Foldable
 import Data.Functor.Classes
@@ -37,6 +38,7 @@ import Data.List hiding ((!!), head, tail, init, last, minimum, transpose, uncon
 import Data.Maybe hiding (fromJust) -- fromJust - partial, use fromMaybe (error "err") at least
 import Data.Proxy
 import Data.Semigroup hiding (Option) -- Option - conflict with System.Console.GetOpt
+import Data.String
 import Data.Typeable
 import Data.Version
 import Data.Void
