@@ -234,6 +234,10 @@ import qualified Linear.Vector as L hiding ((*^), (^*), (^/), (^+^), (^-^))
 import Control.Lens
 #endif
 
+#ifdef MIN_VERSION_monad_control
+import Control.Monad.Trans.Control
+#endif
+
 #ifdef MIN_VERSION_monad_loops
 import Control.Monad.Loops
 #endif
@@ -288,6 +292,10 @@ import Control.Monad.Trans.Maybe
 import Control.Monad.Trans.Reader
 import Control.Monad.Trans.State.Strict
 import Control.Monad.Trans.Writer
+#endif
+
+#ifdef MIN_VERSION_transformers_base
+import Control.Monad.Base
 #endif
 
 #ifdef MIN_VERSION_unix
