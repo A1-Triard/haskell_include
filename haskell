@@ -14,14 +14,14 @@
 -- limitations under the License.
 --
 
-import Prelude hiding ((!!), head, tail, init, last, minimum)
+import Prelude hiding ((!!), head, tail, init, last, minimum, fail) -- fail - confict with Control.Monad.Fail.fail
 import Control.Applicative
 #ifdef TESTS
 import Control.Exception hiding (assert) -- assert - conflict with HUnit:Test.HUnit.Base
 #else
 import Control.Exception
 #endif
-import Control.Monad
+import Control.Monad hiding (fail) -- fail - confict with Control.Monad.Fail.fail
 import Control.Monad.Fail
 import Control.Monad.Fix
 import Control.Monad.Zip
