@@ -103,6 +103,11 @@ import qualified Data.Binary.Get as S
 import qualified Data.Binary.Put as S
 #endif
 
+#ifdef MIN_VERSION_binary_ext
+import Data.Binary.Conduit.Get
+import Data.Binary.Conduit.Put
+#endif
+
 #ifdef MIN_VERSION_bytestring
 import Data.ByteString.Short (ShortByteString)
 import qualified Data.ByteString.Short as HB (ShortByteString)
