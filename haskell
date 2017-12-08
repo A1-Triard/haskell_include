@@ -104,6 +104,8 @@ import qualified Data.Binary.Put as S
 #endif
 
 #ifdef MIN_VERSION_bytestring
+import Data.ByteString.Short (ShortByteString)
+import qualified Data.ByteString.Short as HB (ShortByteString)
 import Data.ByteString.Lazy (ByteString)
 import qualified Data.ByteString as S (ByteString)
 import qualified Data.ByteString.Lazy as B hiding (ByteString, head, last, init, tail)
