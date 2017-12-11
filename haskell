@@ -251,6 +251,7 @@ import Control.Monad.Loops
 
 #ifdef MIN_VERSION_mono_traversable
 import Data.MonoTraversable
+import Data.NonNull
 #endif
 
 #ifdef MIN_VERSION_mtl
