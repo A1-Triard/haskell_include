@@ -88,9 +88,9 @@ import qualified Data.AppSettings as A
 
 #ifdef MIN_VERSION_attoparsec
 import Data.Attoparsec.Text ((<?>))
-import qualified Data.Attoparsec.Text as T (Parser)
-import qualified Data.Attoparsec.Text as TP (parse, parseOnly, Result, IResult (..))
-import qualified Data.Attoparsec.Text as Tp hiding (parse, parseOnly, Parser, Result, IResult, Done, Partial, Fail)
+import qualified Data.Attoparsec.Text as S (Parser)
+import qualified Data.Attoparsec.Text as SP (parse, parseOnly, Result, IResult (..))
+import qualified Data.Attoparsec.Text as Sp hiding (parse, parseOnly, Parser, Result, IResult, Done, Partial, Fail)
 #endif
 
 #ifdef MIN_VERSION_base64_bytestring
@@ -104,8 +104,12 @@ import qualified Data.Binary.Put as S
 #endif
 
 #ifdef MIN_VERSION_binary_ext
-import Data.Binary.Conduit.Get
-import Data.Binary.Conduit.Put
+import Control.Monad.Error.Map
+import Data.Conduit.Parsers.Binary.Get
+import Data.Conduit.Parsers.Binary.Put
+import Data.Conduit.Parsers.Text.Parser (GetM, DefaultParsingState, Parser, runParser, charsRead, linesRead, columnsRead, castParser)
+import qualified Data.Conduit.Parsers.Text.Parser as Tp hiding (GetM, DefaultParsingState, Parser, runParser, charsRead, linesRead, columnsRead, castParser)
+import Data.Conduit.Parsers.Text.Gen
 #endif
 
 #ifdef MIN_VERSION_bytestring
