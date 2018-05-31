@@ -134,7 +134,7 @@ import System.Clock
 #endif
 
 #ifdef MIN_VERSION_conduit
-import Data.Conduit
+import Data.Conduit hiding (ConduitM, Source, Conduit, Sink, ($$), ($=), (=$), (=$=), Producer, Consumer)
 import Data.Conduit.Lift
 #endif
 
