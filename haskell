@@ -151,6 +151,8 @@ import Data.Map (Map)
 import qualified Data.Map.Strict as S (Map)
 import qualified Data.Map as M hiding ((!), Map)
 import qualified Data.Map.Strict as SM hiding ((!), Map)
+import Data.Set (Set)
+import qualified Data.Set as E hiding (Set)
 import Data.Sequence (Seq, (><))
 import qualified Data.Sequence as S hiding (Seq, (<|), (|>), (><), viewl, viewr, ViewL, ViewR, (:>), (:<))
 #endif
