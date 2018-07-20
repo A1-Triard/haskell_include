@@ -14,14 +14,14 @@
 -- limitations under the License.
 --
 
-import Prelude hiding ((!!), head, tail, init, last, minimum, fail) -- fail - confict with Control.Monad.Fail.fail
+import Prelude hiding ((!!), head, tail, init, last, minimum, fail) -- head, tail, init, last - partial, conflict with Data.List.NonEmpty, minimum - partial, fail - conflict with Control.Monad.Fail
 import Control.Applicative
 #ifdef TESTS
 import Control.Exception hiding (assert) -- assert - conflict with HUnit:Test.HUnit.Base
 #else
 import Control.Exception
 #endif
-import Control.Monad hiding (fail) -- fail - confict with Control.Monad.Fail.fail
+import Control.Monad hiding (fail) -- fail - confict with Control.Monad.Fail
 import Control.Monad.Fail
 import Control.Monad.Fix
 import Control.Monad.Zip
@@ -34,16 +34,20 @@ import Data.Functor.Classes
 import Data.Functor.Identity
 import Data.IORef
 import Data.Int
-import Data.List hiding ((!!), head, tail, init, last, minimum, transpose, uncons)
+import Data.List hiding ((!!), head, tail, init, last, minimum, transpose, uncons) -- head, tail, init, last - partial, conflict with Data.List.NonEmpty, minimum - partial
+import Data.List.NonEmpty (NonEmpty (..), head, tail, init, last)
+import qualified Data.List.NonEmpty as N hiding (NonEmpty (..), head, tail, init, last)
 import Data.Maybe hiding (fromJust) -- fromJust - partial, use fromMaybe (error "err") at least
 import Data.Proxy
-import Data.Semigroup hiding (Option) -- Option - conflict with System.Console.GetOpt
+import Data.Semigroup hiding (Option, option) -- Option - conflict with System.Console.GetOpt, option - conflict with binary-ext:Data.Conduit.Parsers.Text.Parser
 import Data.String
 import Data.Typeable
 import Data.Version
 import Data.Void
 import Data.Word
+#ifdef TRACE
 import Debug.Trace
+#endif
 import Foreign.C.String
 import Foreign.C.Types
 import Foreign.Marshal hiding (void)
@@ -88,9 +92,7 @@ import qualified Data.AppSettings as A
 
 #ifdef MIN_VERSION_attoparsec
 import Data.Attoparsec.Text ((<?>))
-import qualified Data.Attoparsec.Text as S (Parser)
-import qualified Data.Attoparsec.Text as SP (parse, parseOnly, Result, IResult (..))
-import qualified Data.Attoparsec.Text as Sp hiding (parse, parseOnly, Parser, Result, IResult, Done, Partial, Fail)
+import qualified Data.Attoparsec.Text as S hiding ((<?>))
 #endif
 
 #ifdef MIN_VERSION_base64_bytestring
@@ -107,8 +109,7 @@ import qualified Data.Binary.Put as S
 import Control.Monad.Error.Map
 import Data.Conduit.Parsers.Binary.Get
 import Data.Conduit.Parsers.Binary.Put
-import Data.Conduit.Parsers.Text.Parser (GetM, DefaultParsingState, Parser, runParser, charsRead, linesRead, columnsRead, castParser)
-import qualified Data.Conduit.Parsers.Text.Parser as Tp hiding (GetM, DefaultParsingState, Parser, runParser, charsRead, linesRead, columnsRead, castParser)
+import Data.Conduit.Parsers.Text.Parser
 import Data.Conduit.Parsers.Text.Gen
 #endif
 
