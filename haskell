@@ -39,7 +39,6 @@ import Data.List.NonEmpty (NonEmpty (..), head, tail, init, last)
 import qualified Data.List.NonEmpty as N hiding (NonEmpty (..), head, tail, init, last)
 import Data.Maybe hiding (fromJust) -- fromJust - partial, use fromMaybe (error "err") at least
 import Data.Proxy
-import Data.Semigroup hiding (Option, option) -- Option - conflict with System.Console.GetOpt, option - conflict with binary-ext:Data.Conduit.Parsers.Text.Parser
 import Data.String
 import Data.Typeable
 import Data.Version
@@ -135,7 +134,7 @@ import System.Clock
 #endif
 
 #ifdef MIN_VERSION_conduit
-import Data.Conduit
+import Data.Conduit hiding (ConduitM, Source, Conduit, Sink, ($$), ($=), (=$), (=$=), Producer, Consumer)
 import Data.Conduit.Lift
 #endif
 
@@ -153,6 +152,8 @@ import Data.Map (Map)
 import qualified Data.Map.Strict as S (Map)
 import qualified Data.Map as M hiding ((!), Map)
 import qualified Data.Map.Strict as SM hiding ((!), Map)
+import Data.Set (Set)
+import qualified Data.Set as E hiding (Set)
 import Data.Sequence (Seq, (><))
 import qualified Data.Sequence as S hiding (Seq, (<|), (|>), (><), viewl, viewr, ViewL, ViewR, (:>), (:<))
 #endif
