@@ -106,8 +106,7 @@ import qualified Data.Binary.Put as S
 import Control.Monad.Error.Map
 import Data.Conduit.Parsers.Binary.Get
 import Data.Conduit.Parsers.Binary.Put
-import Data.Conduit.Parsers.Text.Parser (GetM, DefaultParsingState, Parser, runParser, charsRead, linesRead, columnsRead, castParser)
-import qualified Data.Conduit.Parsers.Text.Parser as Tp hiding (GetM, DefaultParsingState, Parser, runParser, charsRead, linesRead, columnsRead, castParser)
+import Data.Conduit.Parsers.Text.Parser
 import Data.Conduit.Parsers.Text.Gen
 #endif
 
